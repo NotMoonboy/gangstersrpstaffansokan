@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GANGSTERS RP - Staff ansökan</title>
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/1046548046718181376/1095813393170051084/Skarmbild_2023-04-12_223311-transformed_1_-removebg-preview.png">
+
+	<link rel="stylesheet" href="./css/main.css" />
+</head>
+<body>
+	<main>
+		<section class="section-contact">
+			<div class="container">
+				<h1>Staff ansökan</h1>
+				<p>Hej!</p>
+				<p>När du ansöker till staff så kommer du att börja som Trail moderator och därefter utvecklas in i det såkallade ordinära staff teamet.
+					Som staff är det viktigt att du är engagerad och målmedveten, att du har driv och att du framförallt vill sätta serverns intressen i centrum och 
+					aktivt arbeta för ett bättre GANGSTERS RP, för att du i framtiden ska kunna bli en del i servern framåt.</p>
+					<p>Lycka till!</p>
+
+				<form
+				method="POST" 
+  				action="https://script.google.com/macros/s/AKfycbzu5jI6vj_jt0UncmaImQ-yndZRUpq1ehy862UaUz5i-HP4_dYdClL7DN8qqgazcqZKEg/exec"
+>
+					<div class="form-group">
+						<label for="firstname">Vad är ditt namn i verkligheten?*</label>
+						<input 
+							type="text" 
+							name="namn" 
+							id="fname"
+							required 
+							class="form-element"
+							placeholder="Ditt svar" />
+					</div>
+					<div class="form-group">
+						<label for="lastname">Hur gammal är du?*</label>
+						<input type="ålder" name="ålder" id="fname" required class="form-element" placeholder="Ditt svar" />
+					</div>
+					<div class="form-group">
+						<label for="email">Vad är ditt discord namn?*</label>
+						<input type="text" name="discord namn" id="fname" required class="form-element" placeholder="Moon_boy#3068" />
+					</div>
+                    <div class="form-group">
+						<label for="message">Varför ska just du bli staff*</label>
+						<input type="text" name="Varför ska just du bli staff" id="fname" required class="form-element" placeholder="Ditt svar" />
+					</div>
+                    <div class="form-group">
+						<label for="age">Hur länge kan du vara aktiv på servern varje dag?*</label>
+						<input type="text" name="Hur länge kan du vara aktiv på servern varje dag?" id="fname" required class="form-element" placeholder="Ditt svar" />
+					</div>
+					<div class="form-group full">
+						<label for="message">Hur länge har du spelat på GANGSTERS RP?*</label>
+						<textarea name="Hur länge har du spelat på GANGSTERS RP?" id="fname" required class="form-element" placeholder="Ditt svar"></textarea>
+					</div>
+                    <div class="form-group full">
+						<label for="message">Har du tidigare erfarenheter som staff?*</label>
+						<textarea type="text" name="Har du tidigare erfarenheter som staff?" id="fname" required class="form-element" placeholder="Ditt svar" ></textarea>
+					</div>
+                    <div class="form-group full">
+						<label for="message">Vilka områden i staff teamet är du intresserad av att jobba inom?*</label>
+						<textarea name="Vilka områden i staff teamet är du intresserad av att jobba inom?" id="fname" required class="form-element" placeholder="Ditt svar"></textarea>
+					</div>
+                    <div class="form-group full">
+						<label for="message">Finns det något område du inte skulle vilja jobba inom?*</label>
+						<textarea name="Finns det något område du inte skulle vilja jobba inom?" id="fname" required class="form-element" placeholder="Ditt svar"></textarea>
+					</div>
+					<div class="submit-group">
+						<input type="submit" value="SKICKA IN ANSÖKAN" onClick="validation(event)" onclick = "fun();" />
+					</div>
+				</form>
+
+				<!---Scriptet--->
+				<script>
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbzu5jI6vj_jt0UncmaImQ-yndZRUpq1ehy862UaUz5i-HP4_dYdClL7DN8qqgazcqZKEg/exec'
+                const form = document.forms['Staff ansökningar']
+              
+                form.addEventListener('submit', e => {
+                  e.preventDefault()
+                  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    .then(response => console.log('Ansökning är skickad!', response))
+                    .catch(error => console.error('Error!', error.message))
+                })
+
+				function validation() {
+  //                               big D, throws error 
+  // var fname = document.getElementByID("fname").value;
+     var fname = document.getElementById("fname").value;
+  console.log(fname);
+  if (fname == "")
+    alert("Fyll i alla svar först!"); 
+
+	else
+
+	alert ("Din ansökan har skickats in. Våra staffs kommer titta igenom din ansökan så fort som möjligt!");  
+}  
+				  </script>
+				  <!---Slutet av Scriptet--->
+
+			</div>
+		</section>
+	</main>
+</body>
+</html>
